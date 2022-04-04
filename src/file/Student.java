@@ -1,9 +1,15 @@
 package file;
 
-public class Student {
+import java.io.Serializable;
+
+public class Student implements Serializable {
+    private static final long serialVersionUID = 1L;
+
     public String id;
     public String name;
     public int age;
+    public boolean sex;
+    public static String note;
 
     public Student(){}
 
@@ -19,6 +25,8 @@ public class Student {
                 "id='" + id + '\'' +
                 ", name='" + name + '\'' +
                 ", age=" + age +
+                ", sex=" + sex +
+                ", note=" + note +
                 '}';
     }
 
